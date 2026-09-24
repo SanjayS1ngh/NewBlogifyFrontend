@@ -24,7 +24,7 @@ const FollowRequests = () => {
 
             const response =
                 await axios.get(
-                    "http://localhost:5000/api/follow/requests",
+                    "https://newblogifybackend.onrender.com/api/follow/requests",
                     {
                         headers: {
                             Authorization:
@@ -50,7 +50,7 @@ const FollowRequests = () => {
     }, []);
     const handleAccept = async (requestId) => {
         try {
-            await axios.put("http://localhost:5000/api/follow/accept/" + requestId, {}, {
+            await axios.put("https://newblogifybackend.onrender.com/api/follow/accept/" + requestId, {}, {
                 headers: {
                     Authorization:
                         `Bearer ${token}`
@@ -64,7 +64,7 @@ const FollowRequests = () => {
     const handleReject = async (requestId) => {
         try {
             await axios.put(
-                `http://localhost:5000/api/follow/reject/${requestId}`,
+                `https://newblogifybackend.onrender.com/api/follow/reject/${requestId}`,
                 {},
                 {
                     headers: {

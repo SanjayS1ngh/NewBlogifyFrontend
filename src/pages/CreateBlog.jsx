@@ -101,7 +101,7 @@ function CreateBlog() {
         try {
 
             await axios.post(
-                "http://localhost:5000/api/blogs",
+                "https://newblogifybackend.onrender.com/api/blogs",
                 formData,
                 {
                     headers: {
