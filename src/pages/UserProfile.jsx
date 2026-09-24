@@ -55,7 +55,7 @@ function UserProfile() {
 
             const usersResponse =
                 await axios.get(
-                    "http://localhost:5000/api/users",
+                    "https://newblogifybackend.onrender.com/api/users",
                     {
                         headers: {
                             Authorization:
@@ -97,7 +97,7 @@ function UserProfile() {
 
                 const blogsResponse =
                     await axios.get(
-                        `http://localhost:5000/api/blogs/user/${userId}`,
+                        `https://newblogifybackend.onrender.com/api/blogs/user/${userId}`,
                         {
                             headers: {
                                 Authorization:
@@ -146,7 +146,7 @@ function UserProfile() {
         try {
 
             await axios.post(
-                `http://localhost:5000/api/follow/${userId}`,
+                `https://newblogifybackend.onrender.com/api/follow/${userId}`,
                 {},
                 {
                     headers: {

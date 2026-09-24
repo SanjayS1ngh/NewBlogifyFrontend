@@ -30,7 +30,7 @@ const Dashboard = () => {
         localStorage.getItem("token");
     const fetchBlogs = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/api/blogs/my", {
+            const response = await axios.get("https://newblogifybackend.onrender.com/api/blogs/my", {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -63,7 +63,7 @@ const Dashboard = () => {
             return;
         }
         try {
-            await axios.delete(`http://localhost:5000/api/blogs/${blogId}`, {
+            await axios.delete(`https://newblogifybackend.onrender.com/api/blogs/${blogId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
